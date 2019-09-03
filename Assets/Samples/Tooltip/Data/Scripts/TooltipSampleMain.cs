@@ -8,12 +8,9 @@ public class TooltipSampleMain : MonoBehaviour
 
     private void Start()
     {
-        GameObject tooltipInfoGameObject = Instantiate(tooltipPrefab);
         GameObject tooltipAlertGameObject = Instantiate(tooltipPrefab);
-        var tooltipInfo = tooltipInfoGameObject.GetComponent<Tooltip>();
         var tooltipAlert = tooltipAlertGameObject.GetComponent<Tooltip>();
-        tooltipAlert.Setup("YOU MUST CONSTRUCT ADDITIONAL PYLONS", alertSprite);
-        tooltipInfo.Setup("PLEASE JUST DO IT");
+        tooltipAlert.Setup("YOU MUST CONSTRUCT ADDITIONAL PYLONS\nAnother line\nYet ANOTHER line");
         
     }
 }
